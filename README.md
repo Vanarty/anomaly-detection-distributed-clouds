@@ -66,5 +66,5 @@
 - <Куратор>    Дмитрий Качкин — @KachkinDmitrii
 - <Участник 1, Иванов Артём> — @Vanarti, Vanarty
 - <Участник 2, Богданов Андрей> — @wanna_sleeeep, andrewb-codes
-- <Участник 3, Кузнецов Виталий> — @pismith, ---
+- <Участник 3, Кузнецов Виталий> — @pismith, Vitaly
 - <Участник 4, Ванюшин Павел> — @LepoMepo, LepoMepo
