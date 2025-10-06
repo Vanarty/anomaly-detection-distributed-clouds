@@ -64,7 +64,7 @@
  
 ###  Участники:
 - <Куратор>    Дмитрий Качкин — @KachkinDmitrii
-- <Участник 1, Иванов Артём> — @Vanarti, Maksim-de
-- <Участник 2, Богданов Андрей> — @wanna_sleeeep, Kazantsev-Alexey
-- <Участник 3, Кузнецов Виталий> — @pismith, apavlovskii
-- <Участник 4, Ванюшин Павел> — @LepoMepo, Kseniya-5
+- <Участник 1, Иванов Артём> — @Vanarti, Vanarty
+- <Участник 2, Богданов Андрей> — @wanna_sleeeep, andrewb-codes
+- <Участник 3, Кузнецов Виталий> — @pismith, ---
+- <Участник 4, Ванюшин Павел> — @LepoMepo, LepoMepo
