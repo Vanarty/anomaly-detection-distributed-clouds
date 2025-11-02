@@ -14,4 +14,3 @@
 - <Участник 2, Богданов Андрей> — @wanna_sleeeep, andrewb-codes
 - <Участник 3, Кузнецов Виталий> — @pismith, Vitaly
 - <Участник 4, Ванюшин Павел> — @LepoMepo, LepoMepo
-https://github.com/Vanarty/anomaly-detection-distributed-clouds/blob/main/Checkpoint_2/Anroid_v1_log_analysis.ipynb
