@@ -6,7 +6,8 @@
 **Описание и ссылки:**
 1. Обучение модели Random Forest и Isolation Forest (Андрей Богданов). 
 ([RF + IF](https://github.com/Vanarty/anomaly-detection-distributed-clouds/blob/main/Checkpoint_3/RF+IF/)); 
-2. Рассмотрена SVM модель классификации на предобработанном датасете (HDFS_v1 preprocessed) с простым набором параметров модели (Виталий Кузнецов). ([SVM](https://github.com/Vanarty/anomaly-detection-distributed-clouds/blob/main/Checkpoint_3/SVM)).
+2. Рассмотрена SVM модель классификации на предобработанном датасете (HDFS_v1 preprocessed) с простым набором параметров модели (Виталий Кузнецов). ([SVM](https://github.com/Vanarty/anomaly-detection-distributed-clouds/blob/main/Checkpoint_3/SVM));
+3. Рассмотрены ARIMA и ARIMAX модели для классификации логов с обработкой сырого датасета ([ARIMA](https://github.com/Vanarty/anomaly-detection-distributed-clouds/blob/main/Checkpoint_3/ARIMA/)).
 
 ###  Участники:
 - <Участник 1, Иванов Артём> — @Vanarti, Vanarty
