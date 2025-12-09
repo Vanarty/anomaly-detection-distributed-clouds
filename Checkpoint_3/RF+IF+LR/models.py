@@ -35,7 +35,7 @@ def find_threshold_for_recall(y_true, scores, target_recall: float) -> float:
 def collect_summary(name, y_true, y_pred, scores=None, threshold=None) -> dict:
     """Собирает ключевые метрики для сравнения моделей"""
     tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
-    acc = (tp + tn) / (tp + tn + fp + fn)
+    acc  = (tp + tn) / (tp + tn + fp + fn)
     prec = precision_score(y_true, y_pred, zero_division=0)
     rec  = recall_score(y_true, y_pred)
     f1   = 0.0 if (prec + rec) == 0 else 2 * prec * rec / (prec + rec)
@@ -59,7 +59,7 @@ occurrence = pd.read_csv(DATA / 'Event_occurrence_matrix.csv')
 traces = pd.read_csv(DATA / 'Event_traces.csv')
 templates = pd.read_csv(DATA / 'HDFS.log_templates.csv')
 
-labels_map = {'Normal': 0, 'Anomaly': 1}
+labels_map  = {'Normal': 0, 'Anomaly': 1}
 labels['y'] = labels['Label'].map(labels_map).astype(int)
 
 # ============== Фичи ==============
@@ -123,11 +123,11 @@ model_rf.fit(X_train, y_train)
 # Подбор порога на valid под целевой recall
 val_proba_rf = model_rf.predict_proba(X_val)[:, 1]
 threshold_rf = find_threshold_for_recall(y_val, val_proba_rf, TARGET_RECALL)
-val_pred_rf = (val_proba_rf >= threshold_rf).astype(int)
+val_pred_rf  = (val_proba_rf >= threshold_rf).astype(int)
 
 # Оценка на тесте
 test_proba_rf = model_rf.predict_proba(X_test)[:, 1]
-test_pred_rf = (test_proba_rf >= threshold_rf).astype(int)
+test_pred_rf  = (test_proba_rf >= threshold_rf).astype(int)
 
 # Важность признаков
 importances_rf = pd.Series(model_rf.feature_importances_, index=X.columns).sort_values(ascending=False)
@@ -143,12 +143,12 @@ model_iso = IsolationForest(
 model_iso.fit(X_train_norm)
 
 # Считаем степень аномальности
-val_score_if = -model_iso.score_samples(X_val)
+val_score_if  = -model_iso.score_samples(X_val)
 test_score_if = -model_iso.score_samples(X_test)
 
 # Подбор порога на valid под целевой recall
 threshold_if = find_threshold_for_recall(y_val, val_score_if, TARGET_RECALL)
-val_pred_if = (val_score_if >= threshold_if).astype(int)
+val_pred_if  = (val_score_if >= threshold_if).astype(int)
 
 # Оценка на тесте
 test_pred_if = (test_score_if >= threshold_if).astype(int)
@@ -168,11 +168,11 @@ lr.fit(X_train, y_train)
 # Подбор порога на valid под целевой recall
 val_proba_lr = lr.predict_proba(X_val)[:,1]
 threshold_lr = find_threshold_for_recall(y_val, val_proba_lr, TARGET_RECALL)
-val_pred_lr = (val_proba_lr >= threshold_lr).astype(int)
+val_pred_lr  = (val_proba_lr >= threshold_lr).astype(int)
 
 # Оценка на тесте
 test_proba_lr = lr.predict_proba(X_test)[:,1]
-test_pred_lr = (test_proba_lr >= threshold_lr).astype(int)
+test_pred_lr  = (test_proba_lr >= threshold_lr).astype(int)
 
 importances_lr = pd.Series(lr.named_steps['lr'].coef_.ravel(), index=X.columns)
 importances_lr.head(15).to_csv(OUT / 'lr_feature_importances_top15.csv')
